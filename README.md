@@ -43,4 +43,4 @@ To enable this filter
         <url-pattern>/profile/*</url-pattern>
    </filter-mapping>
 ```
-* Drop previously built idp-postlogin-filter.jar into `$CATALINA_HOME/webapps/idp/WEB-INF/lib`
+* Drop previously built `idp-postlogin-filter.jar` into `$CATALINA_HOME/webapps/idp/WEB-INF/lib`
