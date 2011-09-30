@@ -1,0 +1,40 @@
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+    flatDir name: 'localRepository', dirs: 'lib'
+    localRepository {
+       addArtifactPattern(file('lib').absolutePath + '/[name]-[revision].[ext]')
+    }
+}
+
+configurations {
+    all*.exclude group: 'commons-logging', module: 'commons-logging'
+}
+
+servletVersion = '2.5'
+
+dependencies {
+    compile ":shibboleth-common:1.3.0"
+    compile ":shibboleth-identityprovider:2.3.0"
+    compile ":opensaml:2.5.0"
+    compile ":openws:1.4.2"
+    compile ":xmltooling:1.3.2"
+    // TODO: currently forced to comment these provided dependencies out;
+    //   as adding Gradle classpath container to deployment assembly copies them
+    //   to /WEB-INF/lib which causes conflicts
+    compile "javax.servlet:servlet-api:$servletVersion"
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDirs = ['src/main/java']
+        }
+    }
+    test {
+        resources {
+            srcDirs = ['src/test/java']
+        }
+    }
+}
