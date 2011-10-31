@@ -11,7 +11,7 @@ To build
 --------
 Simply run `./gradlew jar`
 
-The jar is then available in `build/libs/idp-postlogin-filter.jar`
+The jar is then available in `build/libs/Shibboleth-IDP-Postlogin-Filter.jar`
 
 To enable this filter
 -------------------
@@ -43,4 +43,4 @@ To enable this filter
         <url-pattern>/profile/*</url-pattern>
    </filter-mapping>
 ```
-* Drop previously built `idp-postlogin-filter.jar` into `$CATALINA_HOME/webapps/idp/WEB-INF/lib`
+* Drop previously built `Shibboleth-IDP-Postlogin-Filter.jar` into `$CATALINA_HOME/webapps/idp/WEB-INF/lib`
