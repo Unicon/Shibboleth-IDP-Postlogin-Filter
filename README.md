@@ -1,6 +1,6 @@
 # Shibboleth IDP Postlogin Flow Plugin
 
-This is a Shibboleth IDP plugin Servlet Filter project that intercepts Shibboleth IDP SSO Profile request and forwards them if necessry to an external 'post login flow' endpoint responsible for actions such as SAML attributes-based authorization, attributes release consent, terms of use acceptance, or anything else that might become required for any particular Shibboleth Idp deployer. Currently there is a default post login flow [project](https://github.com/dima767/Shibboleth-IDP-Postlogin-Flow)
+This is a Shibboleth IDP plugin Servlet Filter project that intercepts Shibboleth IDP SSO Profile request and forwards them if necessry to an external 'post login flow' endpoint responsible for actions such as SAML attributes-based authorization, attributes release consent, terms of use acceptance, or anything else that might become required for any particular Shibboleth Idp deployer. Currently there is a sample post login flow [project](https://github.com/Unicon/Shibboleth-IDP-Postlogin-Flow)
 
 For implementation details see `PostLoginFlowFilter` javadocs
 
